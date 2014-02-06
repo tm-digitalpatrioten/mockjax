@@ -1,0 +1,6 @@
+{
+  "name": "Mockjax",
+  "version": "1.0.0",
+  "author": "DP",
+  "main": ["jquery.mockjax.js"]
+}
