@@ -448,7 +448,9 @@
 			}
 
             //HACK: this overrides mockjax for windows phone 8 since we need to use our custom ajax handler
-            if(window.env.os === "wp8" && requestSettings.dataType === "json"){
+ //mockHandler.proxy != null makes sure this case is only called if we REALLY want to fetch a
+            //FILE and not expect json directly returned from some mocked API calls
+            if(window.env.os === "wp8" && requestSettings.dataType === "json" && mockHandler.proxy != null){
                 var url = mockHandler.proxy;
 
                 var windows_settings = origSettings;
